@@ -1,0 +1,39 @@
+.sidebar {
+    position: fixed;
+    top: 393px;
+    right: 0;
+    transform: translateY(-50%);
+    z-index: 90;
+    padding: 32px;
+    background-color: transparent;
+
+    @include mq (768) {
+        display: none;
+    }
+
+    &__list {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        background-color: transparent;
+    }
+
+    &__item {
+        display: flex;
+        justify-content: flex-end;
+        background-color: transparent;
+    }
+
+    &__link {
+        text-decoration: none;
+        background-color: transparent;
+        transition: all 0.3s ease;
+
+        &:hover {
+            transform: translateX(-5px);
+        }
+    }
+}

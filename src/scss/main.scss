@@ -1,0 +1,19 @@
+// BASE
+@import 'base/mixins';
+@import 'base/variables';
+@import 'base/fonts';
+@import 'base/base';
+@import 'base/reset.scss';
+
+// COMPONENTS
+@import 'components/hero';
+@import 'components/sidebar';
+@import 'components/image';
+@import 'components/text-image';
+@import 'components/header';
+@import 'components/list';
+@import 'components/founder';
+@import 'components/contributors';
+
+// ANIMATIONS
+@import 'animations/imageOverlay';

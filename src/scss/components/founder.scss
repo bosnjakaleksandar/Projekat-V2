@@ -1,0 +1,90 @@
+.founder {
+    margin-top: 22%;
+    position: relative;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+        margin: 0 15%;
+
+        @include mq (1440) {
+            margin: 0 10%;
+        }
+
+        @include mq (992) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        @include mq (768) {
+            margin: 0 5%;
+        }
+    }
+
+    &__arrows {
+        position: absolute;
+        top: -22%;
+        left: 49%;
+
+        @include mq (992) {
+            top: -10%;
+        }
+    }
+
+    &__left {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        max-width: 458px;
+
+        @include mq (620) {
+            overflow: hidden;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        aspect-ratio: 1 / 1;
+    }
+
+    &__two-hexagons {
+        position: absolute;
+        bottom: -8px;
+        right: -80px;
+    }
+
+    &__content {
+        margin-top: 35px;
+        color: $white;
+        width: 100%;
+        max-width: 850px;
+
+        @include mq (768) {
+            margin-top: 0;
+        }
+    }
+
+    &__title {
+        line-height: 77px;
+        color: $green;
+
+        @include mq (640) {
+            line-height: 35px;
+        }
+    }
+
+    &__quote {
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin-top: 55px;
+        gap: 20px;
+    }
+}

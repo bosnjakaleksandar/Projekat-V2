@@ -1,0 +1,101 @@
+.list {
+    position: relative;
+
+    &__nonagon {
+        position: absolute;
+        top: 0;
+        right: 135px;
+
+        @include mq(768) {
+            height: 40px;
+            width: 40px;
+        }
+    }
+
+    &__right-circles {
+        position: absolute;
+        top: 317px;
+        right: 0;
+        z-index: -1;
+
+        @include mq(1440) {
+            width: 100px;
+            height: 180px;
+        }
+
+        @include mq(768) {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-top: 30px;
+        text-transform: uppercase;
+        letter-spacing: -2px;
+        color: $white;
+
+        span {
+            color: $green;
+        }
+    }
+
+    &__list {
+        position: relative;
+        margin-top: 90px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-column-gap: 55px;
+        grid-row-gap: 110px;
+        color: $white;
+
+        @include mq(1440) {
+            grid-template-columns: 1fr 1fr;
+            grid-column-gap: 40px;
+            grid-row-gap: 70px;
+        }
+
+        @include mq(768) {
+            margin-top: 40px;
+            grid-template-columns: 1fr;
+            grid-row-gap: 40px;
+        }
+    }
+
+    &__two-hexagons {
+        position: absolute;
+        top: 43%;
+        left: 24%;
+
+        @include mq(1440) {
+            height: 50px;
+            width: 50px;
+        }
+    }
+
+    &__item {
+        &-title {
+            line-height: 1.1;
+            letter-spacing: 1px;
+        }
+
+        &-description {
+            margin-top: 28px;
+            line-height: 1.2;
+        }
+    }
+
+    &__star {
+        position: absolute;
+        height: 114px;
+        width: 100px;
+        bottom: -30%;
+        left: 7%;
+        z-index: 3;
+
+        @include mq(768) {
+            height: 60px;
+            width: 50px;
+            bottom: -10%;
+        }
+    }
+}
