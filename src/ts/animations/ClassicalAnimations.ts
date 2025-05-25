@@ -81,7 +81,7 @@ const animateElements = () => {
       gsap.to(row, {
         scrollTrigger: {
           trigger: row[0],
-          start: "top 90%",
+          start: "top 80%",
           once: false,
         },
         opacity: 1,
@@ -89,8 +89,8 @@ const animateElements = () => {
         duration: 0.5,
         stagger: {
           each: 0.2,
-          onComplete: function () {
-            this.targets()[0].style.transform = "";
+          onComplete: (targets: Element[]) => {
+            (targets[0] as HTMLElement).style.transform = "";
           },
         },
       });
