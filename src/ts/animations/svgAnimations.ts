@@ -2,6 +2,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
+
 // Social SVG Animation
 const animateSocialSvg = () => {
   const svgObject = document.querySelector(
@@ -34,12 +35,22 @@ const animateSocialSvg = () => {
     });
   };
 
+  const checkAndRunAnimation = () => {
+    if (svgObject.contentDocument?.readyState === "complete") {
+      runAnimation();
+    } else {
+      setTimeout(checkAndRunAnimation, 100);
+    }
+  };
+
   if (svgObject.contentDocument?.readyState === "complete") {
-    setTimeout(runAnimation, 0);
+    setTimeout(runAnimation, 100);
   } else {
     svgObject.addEventListener("load", () => {
-      setTimeout(runAnimation, 50);
+      setTimeout(runAnimation, 100);
     });
+
+    setTimeout(checkAndRunAnimation, 500);
   }
 };
 
@@ -92,20 +103,42 @@ const animateCirclesSvg = (selector: string) => {
       });
     };
 
+    const checkAndRunAnimation = () => {
+      if (svgObject.contentDocument?.readyState === "complete") {
+        runAnimation();
+      } else {
+        setTimeout(checkAndRunAnimation, 100);
+      }
+    };
+
     if (svgObject.contentDocument?.readyState === "complete") {
-      setTimeout(runAnimation, 0);
+      setTimeout(runAnimation, 100);
     } else {
       svgObject.addEventListener("load", () => {
-        setTimeout(runAnimation, 50);
+        setTimeout(runAnimation, 100);
       });
+
+      setTimeout(checkAndRunAnimation, 500);
     }
   });
 };
 
 const svgAnimations = () => {
-  animateSocialSvg();
-  animateCirclesSvg("left-circles");
-  animateCirclesSvg("right-circles");
+  if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        animateSocialSvg();
+        animateCirclesSvg("left-circles");
+        animateCirclesSvg("right-circles");
+      }, 200);
+    });
+  } else {
+    setTimeout(() => {
+      animateSocialSvg();
+      animateCirclesSvg("left-circles");
+      animateCirclesSvg("right-circles");
+    }, 200);
+  }
 };
 
 export default svgAnimations;
