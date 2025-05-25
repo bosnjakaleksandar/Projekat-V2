@@ -65,56 +65,35 @@ const animateElements = () => {
     });
   });
 
-  // From down animations
-  document.querySelectorAll(".js-from-down").forEach((el) => {
-    gsap.set(el, { opacity: 0, y: 50 });
-    gsap.to(el, {
-      scrollTrigger: {
-        trigger: el,
-        start: "top 80%",
-        once: false,
-      },
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-    });
-  });
-
   // from down timeline
   document.querySelectorAll(".timeline-block-down").forEach((block) => {
-    const elements = block.querySelectorAll(".js-from-down-tl");
-    gsap.set(elements, { opacity: 0, y: 50 });
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: block,
-        start: "top 80%",
-        once: false,
-      },
-    });
-    tl.to(elements, {
-      opacity: 1,
-      y: 0,
-      duration: 0.6,
-      stagger: 0.3,
-    });
-  });
+    const elements = Array.from(block.querySelectorAll(".js-from-down-tl"));
+    const rows: Record<number, Element[]> = {};
 
-  // From down timeline fast
-  document.querySelectorAll(".timeline-block-fast").forEach((block) => {
-    const elements = block.querySelectorAll(".js-from-down-tl-fast");
-    gsap.set(elements, { opacity: 0, y: 50 });
-    const tl = gsap.timeline({
-      scrollTrigger: {
-        trigger: block,
-        start: "top 80%",
-        once: false,
-      },
+    elements.forEach((el) => {
+      const top = (el as HTMLElement).offsetTop;
+      if (!rows[top]) rows[top] = [];
+      rows[top].push(el);
     });
-    tl.to(elements, {
-      opacity: 1,
-      y: 0,
-      duration: 0.5,
-      stagger: 0.2,
+
+    Object.values(rows).forEach((row) => {
+      gsap.set(row, { opacity: 0, y: 50 });
+      gsap.to(row, {
+        scrollTrigger: {
+          trigger: row[0],
+          start: "top 90%",
+          once: false,
+        },
+        opacity: 1,
+        y: 0,
+        duration: 0.5,
+        stagger: {
+          each: 0.2,
+          onComplete: function () {
+            this.targets()[0].style.transform = "";
+          },
+        },
+      });
     });
   });
 
@@ -155,8 +134,43 @@ const animateElements = () => {
   });
 };
 
+// Social SVG Animation
+const animateSocialSvg = () => {
+  const svgObject = document.querySelector(
+    ".social__image"
+  ) as HTMLObjectElement | null;
+  if (!svgObject) return;
+
+  const runAnimation = () => {
+    const svgDoc = svgObject.contentDocument;
+    if (!svgDoc) return;
+
+    const elements = svgDoc.querySelectorAll("path, circle, rect, g");
+    gsap.set(elements, { opacity: 0 });
+
+    gsap.to(elements, {
+      scrollTrigger: {
+        trigger: ".social__container",
+        start: "top 80%",
+        once: false,
+      },
+      opacity: 1,
+      duration: 0.5,
+      stagger: 0.2,
+      ease: "power1.inOut",
+    });
+  };
+
+  if (svgObject.contentDocument) {
+    runAnimation();
+  } else {
+    svgObject.onload = runAnimation;
+  }
+};
+
 const classicalAnimations = () => {
   animateElements();
+  animateSocialSvg();
 };
 
 export default classicalAnimations;
