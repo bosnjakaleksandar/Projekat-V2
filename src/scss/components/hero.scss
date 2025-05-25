@@ -17,10 +17,16 @@
     &__heptagon {
         position: absolute;
         left: 50%;
-        transform: translate(-5%, -330%);
+        top: 10%;
         height: 60px;
         width: 60px;
         z-index: 3;
+
+        @include mq(768) {
+            height: 40px;
+            width: 40px;
+            left: 70%;
+        }
     }
 
     &__title {
