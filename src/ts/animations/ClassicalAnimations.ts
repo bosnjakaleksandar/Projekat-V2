@@ -144,27 +144,34 @@ const animateSocialSvg = () => {
   const runAnimation = () => {
     const svgDoc = svgObject.contentDocument;
     if (!svgDoc) return;
+    const groups = svgDoc.querySelectorAll("path, g");
+    if (!groups.length) return;
 
-    const elements = svgDoc.querySelectorAll("path, circle, rect, g");
-    gsap.set(elements, { opacity: 0 });
+    gsap.set(groups, { opacity: 0, y: 20 });
 
-    gsap.to(elements, {
+    gsap.to(groups, {
       scrollTrigger: {
         trigger: ".social__container",
-        start: "top 80%",
-        once: false,
+        start: "top 50%",
+        once: true,
+        onEnter: () => {
+          ScrollTrigger.refresh();
+        },
       },
       opacity: 1,
-      duration: 0.5,
+      y: 0,
+      duration: 1,
       stagger: 0.2,
-      ease: "power1.inOut",
+      ease: "power2.out",
     });
   };
 
-  if (svgObject.contentDocument) {
-    runAnimation();
+  if (svgObject.contentDocument?.readyState === "complete") {
+    setTimeout(runAnimation, 0);
   } else {
-    svgObject.onload = runAnimation;
+    svgObject.addEventListener("load", () => {
+      setTimeout(runAnimation, 50);
+    });
   }
 };
 
