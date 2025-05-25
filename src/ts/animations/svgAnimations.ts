@@ -30,7 +30,7 @@ const animateSocialSvg = () => {
       opacity: 1,
       y: 0,
       duration: 1,
-      stagger: 0.2,
+      stagger: 0.1,
       ease: "power2.out",
     });
   };
@@ -96,7 +96,7 @@ const animateCirclesSvg = (selector: string) => {
             duration: 1,
             stagger: 0.1,
             ease: "power2.inOut",
-            repeat: -1,
+            repeat: 3,
             yoyo: true,
           });
         },

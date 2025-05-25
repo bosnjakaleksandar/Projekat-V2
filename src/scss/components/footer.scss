@@ -22,15 +22,21 @@
         }
     }
 
+    &__logo-image {
+        width: 100%;
+        height: auto;
+    }
+
     &__list {
         display: flex;
         flex-direction: column;
         gap: 25px;
 
         @include mq (678) {
-            flex-direction: row;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
             gap: 20px;
-            width: 100%;
+            width: 50%;
         }
     }
 

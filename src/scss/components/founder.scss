@@ -98,5 +98,8 @@
         bottom: -140px;
         right: 130px;
 
+        @include mq (768) {
+            right: 0;
+        }
     }
 }
