@@ -37,3 +37,21 @@
         }
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .sidebar {
+        top: 20.46875vw;
+        padding: 1.66667vw;
+
+        &__list {
+            gap: 1.25vw;
+        }
+
+        &__link {
+            &:hover {
+                transform: translateX(-0.26042vw);
+            }
+        }
+    }
+}

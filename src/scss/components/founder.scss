@@ -103,3 +103,40 @@
         }
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .founder {
+        &__container {
+            gap: 2.08333vw;
+        }
+
+        &__left {
+            max-width: 23.85417vw;
+        }
+
+        &__two-hexagons {
+            bottom: -0.41667vw;
+            right: -4.16667vw;
+        }
+
+        &__content {
+            margin-top: 1.82292vw;
+            max-width: 44.27083vw;
+        }
+
+        &__title {
+            line-height: 4.01042vw;
+        }
+
+        &__quote {
+            margin-top: 2.86458vw;
+            gap: 1.04167vw;
+        }
+
+        &__hexagon {
+            bottom: -7.29167vw;
+            right: 6.77083vw;
+        }
+    }
+}

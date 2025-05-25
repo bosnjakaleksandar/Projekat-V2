@@ -82,3 +82,20 @@
         }
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .text-image {
+        margin-top: 12.5vw;
+
+        &__title {
+            letter-spacing: -0.15625vw;
+            margin-bottom: 1.5625vw;
+        }
+
+        &__left-circles {
+            bottom: 11.45833vw;
+            left: 0.41667vw;
+        }
+    }
+}

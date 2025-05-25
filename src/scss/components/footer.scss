@@ -135,3 +135,42 @@
         }
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .footer {
+        &__list {
+            gap: 1.30208vw;
+        }
+
+        &__social {
+            margin-top: 0.52083vw;
+            gap: 1.19792vw;
+
+            &-item {
+                height: 0.9375vw;
+                width: 0.9375vw;
+
+                img {
+                    height: 0.9375vw;
+                    width: 0.9375vw;
+                }
+            }
+        }
+
+        &__copyright {
+            padding-bottom: 1.04167vw;
+
+            &-link {
+                &::after {
+                    height: 0.05208vw;
+                    bottom: 0.10417vw;
+                }
+            }
+        }
+
+        &__right-circles {
+            right: 13.54167vw;
+        }
+    }
+}

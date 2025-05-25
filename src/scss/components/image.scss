@@ -57,3 +57,12 @@
         }
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .image {
+        &__right-circles {
+            right: 0.26042vw;
+        }
+    }
+}

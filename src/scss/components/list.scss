@@ -99,3 +99,42 @@
         }
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .list {
+        &__nonagon {
+            right: 7.03125vw;
+        }
+
+        &__right-circles {
+            top: 16.51042vw;
+        }
+
+        &__title {
+            margin-top: 1.5625vw;
+            letter-spacing: -0.10417vw;
+        }
+
+        &__list {
+            margin-top: 4.6875vw;
+            grid-column-gap: 2.86458vw;
+            grid-row-gap: 5.72917vw;
+        }
+
+        &__item {
+            &-title {
+                letter-spacing: 0.05208vw;
+            }
+
+            &-description {
+                margin-top: 1.45833vw;
+            }
+        }
+
+        &__star {
+            height: 5.9375vw;
+            width: 5.20833vw;
+        }
+    }
+}

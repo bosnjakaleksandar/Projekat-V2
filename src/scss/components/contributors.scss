@@ -59,3 +59,25 @@
         line-height: 1.5;
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .contributors {
+        &__title {
+            letter-spacing: -0.10417vw;
+        }
+
+        &__list {
+            grid-column-gap: 5.20833vw;
+            grid-row-gap: 3.64583vw;
+        }
+
+        &__name {
+            margin-bottom: 0.36458vw;
+        }
+
+        &__link {
+            padding: 0.78125vw 1.35417vw;
+        }
+    }
+}

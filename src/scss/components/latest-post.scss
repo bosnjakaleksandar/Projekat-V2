@@ -154,3 +154,51 @@
         }
     }
 }
+
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .latest-post {
+        &__left-circles {
+            left: 0.52083vw;
+            top: -8.59375vw;
+        }
+
+        &__arrows {
+            top: -3.38542vw;
+        }
+
+        &__star {
+            top: -11.97917vw;
+            right: 5.72917vw;
+        }
+
+        &__title {
+            letter-spacing: -0.10417vw;
+        }
+
+        &__list {
+            grid-column-gap: 5.20833vw;
+        }
+
+        &__date {
+            margin-top: 1.30208vw;
+            margin-bottom: 0.78125vw;
+        }
+
+        &__description {
+            margin-bottom: 0.78125vw;
+        }
+
+        &__main-link {
+            padding: 0.78125vw 1.35417vw;
+        }
+
+        &__arrows-second {
+            bottom: -6.25vw;
+        }
+
+        &__star-second {
+            bottom: -6.77083vw;
+        }
+    }
+}

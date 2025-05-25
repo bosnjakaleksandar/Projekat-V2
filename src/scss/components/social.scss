@@ -51,5 +51,26 @@
         width: 92%;
         height: auto;
     }
+}
 
+// 4K Media Querie
+@media (min-width: 1921px) {
+    .social {
+        &__left-circles {
+            left: 0.52083vw;
+            top: -15.72917vw;
+        }
+
+        &__arrows {
+            top: -3.125vw;
+        }
+
+        &__star {
+            top: -13.02083vw;
+        }
+
+        &__title {
+            letter-spacing: -0.10417vw;
+        }
+    }
 }
