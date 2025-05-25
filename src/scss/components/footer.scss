@@ -1,0 +1,105 @@
+.footer {
+    margin-top: 12%;
+
+    &__container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+
+        @include mq (678) {
+            flex-direction: column;
+        }
+    }
+
+    &__nav {
+        margin-left: 11%;
+
+        @include mq (678) {
+            margin-left: 0;
+            margin-top: 20px;
+            width: 100%;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        @include mq (678) {
+            flex-direction: row;
+            gap: 20px;
+            width: 100%;
+        }
+    }
+
+    &__link {
+        color: $white;
+        text-decoration: none;
+    }
+
+    &__social {
+        margin-top: 10px;
+        margin-left: 8%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 23px;
+
+        &-item {
+            height: 18px;
+            width: 18px;
+
+            img {
+                height: 18px;
+                width: 18px;
+            }
+        }
+
+        @include mq (678) {
+            margin-top: 5%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            margin-left: 0;
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    &__copyright {
+        margin-top: 6%;
+        text-align: center;
+        margin-bottom: 20px;
+        color: $white;
+
+        &-link {
+            text-decoration: none;
+            color: $green;
+            transition: all 0.3s ease;
+            position: relative;
+
+            &::after {
+                content: '';
+                position: absolute;
+                width: 0;
+                height: 1px;
+                bottom: 2px;
+                left: 0;
+                background-color: $red;
+                transition: width 0.3s ease;
+            }
+
+            &:hover {
+                color: $red;
+
+                &::after {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

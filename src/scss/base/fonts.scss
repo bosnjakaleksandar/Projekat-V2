@@ -55,7 +55,7 @@ line-height: calc(#{$line-height} / #{$size});
 
 $font-variants: (
     // Aspergit
-    "a-113-700": ("a", 113, 700, 113, null, ($lap-small: 80, $tablet: 64, $phone: 48)),
+    "a-113-700": ("a", 113, 700, 113, null, ($lap-small: 80, $tablet: 64, $phone: 35)),
     "a-94-700": ("a", 94, 700, 94, null, ($lap-small: 64, $tablet: 48, $phone: 32)),
     "a-54-700": ("a", 54, 700, 54, null, ($lap-small: 42, $tablet: 36, $phone: 28)),
     "a-44-700": ("a", 44, 700, 44, null, ($lap-small: 36, $tablet: 32, $phone: 24)),

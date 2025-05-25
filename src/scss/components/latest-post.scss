@@ -1,0 +1,74 @@
+.latest-post {
+    margin-top: 16%;
+    color: $white;
+
+    &__title {
+        text-transform: uppercase;
+        line-height: 1.2;
+        letter-spacing: -2px;
+    }
+
+    &__list {
+        margin-top: 3%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 100px;
+
+        @include mq (992) {
+            grid-template-columns: 1fr;
+            grid-row-gap: 50px;
+        }
+    }
+
+    &__wrapper {
+        overflow: hidden;
+    }
+
+    &__thumbnail {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        transition: transform 0.3s ease;
+    }
+
+    &__date {
+        margin-top: 25px;
+        margin-bottom: 15px;
+        line-height: 1.1;
+    }
+
+    &__subtitle {
+        line-height: 1.2;
+        transition: color 0.3s ease;
+    }
+
+    &__description {
+        line-height: 1.1;
+        margin-bottom: 15px;
+    }
+
+    &__link {
+        color: $green;
+        text-transform: uppercase;
+        transition: color 0.3s ease;
+    }
+
+    &__article-link {
+        text-decoration: none;
+        color: $white;
+
+        &:hover {
+            .latest-post__subtitle {
+                color: $red;
+            }
+
+            .latest-post__link {
+                color: $red;
+            }
+
+            .latest-post__thumbnail {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

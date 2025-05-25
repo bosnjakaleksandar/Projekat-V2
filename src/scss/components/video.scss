@@ -1,0 +1,17 @@
+.video {
+    margin-top: 7%;
+
+    &__title {
+        color: $white;
+        line-height: 1.2;
+        letter-spacing: -2px;
+    }
+
+    &__player {
+        margin-top: 4%;
+        width: 100%;
+        height: auto;
+        max-height: 663px;
+        object-fit: cover;
+    }
+}
