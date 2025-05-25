@@ -1,5 +1,6 @@
 .footer {
-    margin-top: 12%;
+    margin-top: 10%;
+    position: relative;
 
     &__container {
         display: flex;
@@ -36,6 +37,11 @@
     &__link {
         color: $white;
         text-decoration: none;
+        transition: all 0.3s ease;
+
+        &:hover {
+            color: $green;
+        }
     }
 
     &__social {
@@ -48,10 +54,15 @@
         &-item {
             height: 18px;
             width: 18px;
+            transition: all 0.3s ease;
 
             img {
                 height: 18px;
                 width: 18px;
+            }
+
+            &:hover {
+                transform: scale(1.5);
             }
         }
 
@@ -73,7 +84,7 @@
     &__copyright {
         margin-top: 6%;
         text-align: center;
-        margin-bottom: 20px;
+        padding-bottom: 20px;
         color: $white;
 
         &-link {
@@ -100,6 +111,21 @@
                     width: 100%;
                 }
             }
+        }
+    }
+
+    &__right-circles {
+        position: absolute;
+        bottom: 0;
+        right: 260px;
+
+        @include mq (1440) {
+            width: 200px;
+            height: 200px;
+        }
+
+        @include mq (992) {
+            display: none;
         }
     }
 }

@@ -43,10 +43,10 @@ const animateSocialSvg = () => {
   }
 };
 
-// Left Circles SVG Animation
-const animateLeftCirclesSvg = () => {
+// Circles SVG Animation
+const animateCirclesSvg = (selector: string) => {
   const svgObjects = document.querySelectorAll(
-    "[class*='left-circles']"
+    `[class*='${selector}']`
   ) as NodeListOf<HTMLObjectElement>;
 
   if (!svgObjects.length) return;
@@ -104,7 +104,8 @@ const animateLeftCirclesSvg = () => {
 
 const svgAnimations = () => {
   animateSocialSvg();
-  animateLeftCirclesSvg();
+  animateCirclesSvg("left-circles");
+  animateCirclesSvg("right-circles");
 };
 
 export default svgAnimations;

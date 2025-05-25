@@ -109,10 +109,11 @@
             ></span>
           </div>
         </div>
-        <img
-          class="image__right-circles | js-from-up"
-          src="img/svg/right-circles.svg"
-        />
+        <object
+          class="image__right-circles"
+          type="image/svg+xml"
+          data="img/svg/right-circles.svg"
+        ></object>
       </section>
       <section class="text-image | timeline-block-down">
         <div class="text-image__container container15">
@@ -171,10 +172,11 @@
       </section>
       <section class="list">
         <img class="list__nonagon | js-rotate" src="img/svg/nonagon-2.svg" />
-        <img
-          class="list__right-circles | js-from-down"
-          src="img/svg/right-circles-2.svg"
-        />
+        <object
+          class="list__right-circles"
+          type="image/svg+xml"
+          data="img/svg/right-circles-2.svg"
+        ></object>
         <div class="list__container container15 | timeline-block-down">
           <h3 class="list__title a-94-700 | js-from-down-tl">
             <span>Why</span> us?
@@ -280,6 +282,7 @@
             </div>
           </div>
         </div>
+        <img class="founder__hexagon | js-rotate" src="img/svg/hexagon.svg" />
       </section>
       <section class="contributors">
         <div class="contributors__container container15 | timeline-block-down">
@@ -381,63 +384,120 @@
             type="image/svg+xml"
             data="img/social/social.svg"
           ></object>
+          <img class="social__arrows | js-from-left" src="img/svg/arrows.svg" />
+          <img class="social__star | js-rotate" src="img/svg/star.svg" />
         </div>
       </section>
       <section class="video">
+        <object
+          class="video__right-circles"
+          type="image/svg+xml"
+          data="img/svg/left-circles-2.svg"
+        ></object>
         <div class="video__container container15">
-          <h6 class="video__title a-94-700">
+          <h6 class="video__title a-94-700 | js-from-up">
             INTRODUCTION TO <br />OUR WORKFLOW
           </h6>
-          <video class="video__player" controls poster="img/poster.png">
-            <source src="img/zvona.mp4" type="video/mp4" />
-          </video>
+          <img class="video__star | js-rotate" src="img/svg/star-2.svg" />
+          <img class="video__heptagon | js-rotate" src="img/svg/heptagon.svg" />
+          <div
+            class="video-wrapper--upload show-initial-overlay video-is-paused"
+          >
+            <video class="video__player | js-from-up" poster="img/poster.png">
+              <source src="img/zvona.mp4" type="video/mp4" />
+            </video>
+            <button
+              class="video-wrapper__play-button video-wrapper__play-button--paused"
+              aria-label="Play video"
+            >
+              <!-- Add your play/pause icon here -->
+              <svg class="play-icon" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              <svg class="pause-icon" viewBox="0 0 24 24">
+                <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z" />
+              </svg>
+            </button>
+          </div>
         </div>
       </section>
       <section class="latest-post">
-        <div class="latest-post__container container15">
-          <p class="latest-post__title a-94-700">Latest News</p>
+        <object
+          class="latest-post__left-circles"
+          type="image/svg+xml"
+          data="img/svg/right-circles.svg"
+        ></object>
+        <img
+          class="latest-post__arrows | js-from-left"
+          src="img/svg/arrows.svg"
+        />
+        <img class="latest-post__star | js-rotate" src="img/svg/star-4.svg" />
+        <div class="latest-post__container container15 | timeline-block-down">
+          <p class="latest-post__title a-94-700 | js-from-down-tl">
+            Latest News
+          </p>
           <div class="latest-post__list">
-            <a href="" class="latest-post__article-link">
+            <a href="" class="latest-post__article-link | js-from-down-tl">
               <article class="lates-post__item">
                 <div class="latest-post__wrapper">
-                  <img class="latest-post__thumbnail" src="img/post.png" />
+                  <img
+                    class="latest-post__thumbnail | js-from-down-tl"
+                    src="img/post.png"
+                  />
                 </div>
-                <p class="latest-post__date f-28-300">13 Feb 2022</p>
-                <p class="latest-post__subtitle a-44-700">
+                <p class="latest-post__date f-28-300 | js-from-down-tl">
+                  13 Feb 2022
+                </p>
+                <p class="latest-post__subtitle a-44-700 | js-from-down-tl">
                   Eu hac a ridiculus velit, ma...
                 </p>
-                <p class="latest-post__description f-28-300">
+                <p class="latest-post__description f-28-300 | js-from-down-tl">
                   Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
                   semper proin quisque arcu, cras eget turpis tortor tristique
                   egestas quisqu...
                 </p>
-                <span class="latest-post__link a-18-700"> Read more </span>
+                <span class="latest-post__link a-18-700 | js-from-down-tl">
+                  Read more
+                </span>
               </article>
             </a>
-            <a
-              href=""
-              class="latest-post__article-link"
-              target="_blank"
-              rel="nofollow noreferrer noopener"
-            >
+            <a href="" class="latest-post__article-link | js-from-down-tl">
               <article class="lates-post__item">
                 <div class="latest-post__wrapper">
-                  <img class="latest-post__thumbnail" src="img/post.png" />
+                  <img
+                    class="latest-post__thumbnail | js-from-down-tl"
+                    src="img/post.png"
+                  />
                 </div>
-                <p class="latest-post__date f-28-300">13 Feb 2022</p>
-                <p class="latest-post__subtitle a-44-700">
+                <p class="latest-post__date f-28-300 | js-from-down-tl">
+                  13 Feb 2022
+                </p>
+                <p class="latest-post__subtitle a-44-700 | js-from-down-tl">
                   Eu hac a ridiculus velit, ma...
                 </p>
-                <p class="latest-post__description f-28-300">
+                <p class="latest-post__description f-28-300 | js-from-down-tl">
                   Vel arcu, cras eget turpis tortor tristique egestas. Volutpat
                   semper proin quisque arcu, cras eget turpis tortor tristique
                   egestas quisqu...
                 </p>
-                <span class="latest-post__link a-18-700"> Read more </span>
+                <span class="latest-post__link a-18-700 | js-from-down-tl">
+                  Read more
+                </span>
               </article>
             </a>
           </div>
+          <a class="latest-post__main-link a-18-700 | js-from-down-tl" href="">
+            View all news</a
+          >
         </div>
+        <img
+          class="latest-post__star-second | js-rotate"
+          src="img/svg/star-3.svg"
+        />
+        <img
+          class="latest-post__arrows-second | js-from-left"
+          src="img/svg/arrows.svg"
+        />
       </section>
     </main>
     <footer class="footer">
@@ -493,6 +553,11 @@
           </li>
         </ul>
       </div>
+      <object
+        class="footer__right-circles"
+        type="image/svg+xml"
+        data="img/svg/right-circles-3.svg"
+      ></object>
       <p class="footer__copyright f-28-300">
         Design and development by
         <a class="footer__copyright-link" href="https://www.popwebdesign.net">

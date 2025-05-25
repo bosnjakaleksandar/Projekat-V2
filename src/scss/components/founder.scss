@@ -31,6 +31,11 @@
         @include mq (992) {
             top: -10%;
         }
+
+        @include mq (768) {
+            width: 35px;
+            height: 15px;
+        }
     }
 
     &__left {
@@ -86,5 +91,12 @@
         align-items: flex-start;
         margin-top: 55px;
         gap: 20px;
+    }
+
+    &__hexagon {
+        position: absolute;
+        bottom: -140px;
+        right: 130px;
+
     }
 }

@@ -1,10 +1,46 @@
 .video {
     margin-top: 7%;
+    position: relative;
+
+    &__right-circles {
+        position: absolute;
+        right: 0;
+        top: -128px;
+
+        @include mq(768) {
+            width: 30px;
+            height: 90px;
+        }
+    }
+
+    &__star {
+        position: absolute;
+        left: 7%;
+        top: -15px;
+
+        @include mq(768) {
+            height: 60px;
+            width: 50px;
+        }
+    }
+
+    &__heptagon {
+        position: absolute;
+        right: 36%;
+        top: 50px;
+
+        @include mq(768) {
+            width: 30px;
+            height: 30px;
+        }
+    }
 
     &__title {
         color: $white;
         line-height: 1.2;
         letter-spacing: -2px;
+        position: relative;
+        z-index: 2;
     }
 
     &__player {
@@ -13,5 +49,98 @@
         height: auto;
         max-height: 663px;
         object-fit: cover;
+        z-index: 2;
+        position: relative;
+    }
+
+    .video-wrapper--upload {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+    }
+
+    video {
+        position: relative;
+        z-index: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.3s ease-in-out;
+        z-index: 1;
+        pointer-events: none;
+    }
+
+    &.show-initial-overlay::after {
+        opacity: 1;
+    }
+
+    .video-wrapper__play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 90px;
+        height: 90px;
+        background: rgba(255, 255, 255, 0.3);
+        border: 2px solid rgba(255, 255, 255, 1);
+        border-radius: 50%;
+        cursor: pointer;
+        transition: opacity 0.3s ease, background-color 0.2s ease, transform 0.2s ease;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 2;
+
+        @include mq (992) {
+            width: 64px;
+            height: 64px;
+        }
+
+        &:hover {
+            background-color: rgba(255, 255, 255, 0.5);
+            transform: translate(-50%, -50%) scale(1.05);
+
+            svg {
+                transform: scale(1.2);
+            }
+        }
+
+        svg {
+            width: 50px;
+            height: 35px;
+            fill: rgba(255, 255, 255, 1);
+            display: none;
+            transition: transform 0.2s ease;
+        }
+
+        .play-icon {
+            margin-left: 5px;
+        }
+
+        &--paused {
+            .play-icon {
+                display: block;
+            }
+        }
+
+        &--playing {
+            .pause-icon {
+                display: block;
+            }
+        }
+
+        &.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
     }
 }
