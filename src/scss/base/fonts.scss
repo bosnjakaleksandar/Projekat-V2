@@ -55,19 +55,16 @@ line-height: calc(#{$line-height} / #{$size});
 
 $font-variants: (
     // Aspergit
-
-    "a-113-700": ("a", 113, 700, 113, null, ($lap-small: 60, $phone: 40)),
-    "a-94-700": ("a", 94, 700, 94, null, ($lap-small: 40, $phone: 20)),
-    "a-54-700": ("a", 54, 700, 54, null, ($lap-small: 30, $phone: 18)),
-    "a-44-700": ("a", 44, 700, 44, null, ($lap-small: 30, $phone: 18)),
-    "a-30-700": ("a", 30, 700, 30, null, ($lap-small: 20, $phone: 14)),
-    "a-18-700": ("a", 18, 700, 18, null, ($lap-small: 16, $phone: 14)),
+    "a-113-700": ("a", 113, 700, 113, null, ($lap-small: 80, $tablet: 64, $phone: 48)),
+    "a-94-700": ("a", 94, 700, 94, null, ($lap-small: 64, $tablet: 48, $phone: 32)),
+    "a-54-700": ("a", 54, 700, 54, null, ($lap-small: 42, $tablet: 36, $phone: 28)),
+    "a-44-700": ("a", 44, 700, 44, null, ($lap-small: 36, $tablet: 32, $phone: 24)),
+    "a-30-700": ("a", 30, 700, 30, null, ($lap-small: 24, $tablet: 20, $phone: 18)),
+    "a-18-700": ("a", 18, 700, 18, null, ($lap-small: 16, $tablet: 16, $phone: 14)),
 
     // Futura-PT
-    
-    "f-30-300": ("f", 30, 300, 30, null, ($lap-small: 20, $phone: 14)),
-    "f-28-300": ("f", 28, 300, 28, null, ($lap-small: 20, $phone: 14)),
-
+    "f-30-300": ("f", 30, 300, 30, null, ($lap-small: 24, $tablet: 20, $phone: 18)),
+    "f-28-300": ("f", 28, 300, 28, null, ($lap-small: 22, $tablet: 20, $phone: 16)),
 );
 
 // --------------------------------------------

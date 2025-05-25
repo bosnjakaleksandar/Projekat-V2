@@ -1,6 +1,18 @@
 .social {
+    position: relative;
     margin-top: 16%;
     color: $white;
+
+    &__left-circles {
+        position: absolute;
+        left: 10px;
+        top: -302px;
+
+        @include mq (768) {
+            width: 30px;
+            height: 90px;
+        }
+    }
 
     &__title {
         letter-spacing: -2px;

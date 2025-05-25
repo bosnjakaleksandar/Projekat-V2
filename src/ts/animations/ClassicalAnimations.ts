@@ -89,8 +89,10 @@ const animateElements = () => {
         duration: 0.5,
         stagger: {
           each: 0.2,
-          onComplete: (targets: Element[]) => {
-            (targets[0] as HTMLElement).style.transform = "";
+          onComplete: (_index: number, target: Element) => {
+            if (target) {
+              (target as HTMLElement).style.transform = "";
+            }
           },
         },
       });
@@ -134,50 +136,8 @@ const animateElements = () => {
   });
 };
 
-// Social SVG Animation
-const animateSocialSvg = () => {
-  const svgObject = document.querySelector(
-    ".social__image"
-  ) as HTMLObjectElement | null;
-  if (!svgObject) return;
-
-  const runAnimation = () => {
-    const svgDoc = svgObject.contentDocument;
-    if (!svgDoc) return;
-    const groups = svgDoc.querySelectorAll("path, g");
-    if (!groups.length) return;
-
-    gsap.set(groups, { opacity: 0, y: 20 });
-
-    gsap.to(groups, {
-      scrollTrigger: {
-        trigger: ".social__container",
-        start: "top 50%",
-        once: true,
-        onEnter: () => {
-          ScrollTrigger.refresh();
-        },
-      },
-      opacity: 1,
-      y: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power2.out",
-    });
-  };
-
-  if (svgObject.contentDocument?.readyState === "complete") {
-    setTimeout(runAnimation, 0);
-  } else {
-    svgObject.addEventListener("load", () => {
-      setTimeout(runAnimation, 50);
-    });
-  }
-};
-
 const classicalAnimations = () => {
   animateElements();
-  animateSocialSvg();
 };
 
 export default classicalAnimations;
