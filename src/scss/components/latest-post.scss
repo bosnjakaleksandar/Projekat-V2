@@ -106,7 +106,7 @@
             }
 
             .latest-post__thumbnail {
-                transform: scale(1.1);
+                transform: scale(1.1) !important;
             }
         }
     }
@@ -155,7 +155,7 @@
     }
 }
 
-// 4K Media Querie
+// 4K Media Queries
 @media (min-width: 1921px) {
     .latest-post {
         &__left-circles {
