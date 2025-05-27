@@ -13,6 +13,7 @@
         z-index: 3;
 
         @include mq (768) {
+            top: -100px;
             width: 30px;
             height: 90px;
         }
@@ -52,6 +53,7 @@
         z-index: 3;
 
         @include mq (768) {
+            bottom: -100px;
             width: 30px;
             height: 90px;
         }

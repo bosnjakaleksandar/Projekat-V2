@@ -13,6 +13,11 @@
             height: 90px;
             top: -90px;
         }
+
+        @include mq (568) {
+            top: -70px;
+            transform: rotate(90deg);
+        }
     }
 
     &__arrows {
@@ -31,6 +36,10 @@
         position: absolute;
         top: -230px;
         right: 110px;
+
+        @include mq (1380) {
+            right: 10px;
+        }
 
         @include mq (768) {
             width: 60px;
@@ -130,6 +139,10 @@
         position: absolute;
         bottom: -120px;
         right: 20%;
+
+        @include mq (1050) {
+            right: 0;
+        }
 
         @include mq (768) {
             width: 35px;

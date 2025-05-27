@@ -108,10 +108,12 @@
             height: 60px;
             width: 50px;
         }
+
+        @include mq(568) {
+            top: 30%;
+        }
     }
 }
 
 // 4K Media Queries
-@media (min-width: 1921px) {
-    
-}
+@media (min-width: 1921px) {}

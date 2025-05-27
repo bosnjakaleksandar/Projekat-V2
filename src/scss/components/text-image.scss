@@ -39,6 +39,10 @@
             width: 35px;
             height: 15px;
         }
+
+        @include mq (568) {
+            top: -30px;
+        }
     }
 
     &__star {
@@ -53,6 +57,12 @@
         @include mq(768) {
             height: 60px;
             width: 50px;
+        }
+
+        @include mq(568) {
+            top: 20px;
+            height: 40px;
+            width: 30px;
         }
     }
 
@@ -76,9 +86,7 @@
         left: 8px;
 
         @include mq (768) {
-            width: 30px;
-            height: 90px;
-            bottom: 50px;
+            display: none;
         }
     }
 }

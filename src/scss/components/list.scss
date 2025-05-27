@@ -70,6 +70,12 @@
             height: 50px;
             width: 50px;
         }
+
+        @include mq(568) {
+            top: 45%;
+            right: 20px;
+            left: unset;
+        }
     }
 
     &__item {
